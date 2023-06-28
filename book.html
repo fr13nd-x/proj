@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css"  rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    .amenities {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .amenity-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .amenity-item .material-icons {
+      font-size: 14px;
+      color: blue;
+    }
+
+    .amenity-name {
+      font-size: 0.2px;
+      color: blue;
+    }
+
+    .book-button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-2xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="hotel1.jpg" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">example hotel 1</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Experience luxury at its best nigga.</p>
+        
+
+
+        <div class="amenities">
+          <div class="amenity-item">
+            <i class="material-icons">wifi</i>
+            <span><p class="text-xs font-light text-green-600">Wi-Fi</p></span>
+          </div>
+          <div class="amenity-item">
+            <i class="material-icons">bathtub</i>
+            <span><p class="text-xs font-light text-green-600">Private Bathroom</p></span>
+          </div>
+          <div class="amenity-item">
+            <i class="material-icons">ac_unit</i>
+            <span><p class="text-xs font-light text-green-600">Air Conditioning</p></span>
+          </div>
+          <div class="amenity-item">
+            <i class="material-icons">tv</i>
+            <span><p class="text-xs font-light text-green-600">TV</p></span>
+          </div>
+        </div>
+      </div>
+      <button id="bookButton" type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      View 
+      <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+      </svg>
+      </button>
+
+    </div>
+</a>
+
+
+
+
+
+<script>
+  // Add event listener to the button
+  var button = document.getElementById("bookButton");
+  button.addEventListener("click", function() {
+    // Redirect to hotel-details.html
+    window.location.href = "hotel-details.html";
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+
+</body>
+</html>
+
+
