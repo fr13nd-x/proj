@@ -1,145 +1,1042 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>burudika ventures</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
-	
+    <!-- Font awesome  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- for the sidebar icons & styling-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="sidebar.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-
-
-
-<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-   <span class="sr-only">Open sidebar</span>
-   <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-   </svg>
-</button>
-
-<aside id="sidebar-multi-level-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-      <ul class="space-y-2 font-medium">
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-               <span class="ml-3">Dashboard</span>
+    <div class="card">
+      <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">Burudika</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Search...">
+             <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Vehicles</span>
             </a>
+             <span class="tooltip">Vehicles</span>
+          </li>
+          <li>
+           <a href="#">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">Hotels</span>
+           </a>
+           <span class="tooltip">Hotels</span>
          </li>
          <li>
-            <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>E-commerce</span>
-                  <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+           <a href="#">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Messages</span>
+           </a>
+           <span class="tooltip">Messages</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-pie-chart-alt-2' ></i>
+             <span class="links_name">Analytics</span>
+           </a>
+           <span class="tooltip">Analytics</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-folder' ></i>
+             <span class="links_name">File Manager</span>
+           </a>
+           <span class="tooltip">Files</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cart-alt' ></i>
+             <span class="links_name">Order</span>
+           </a>
+           <span class="tooltip">Order</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-heart' ></i>
+             <span class="links_name">Saved</span>
+           </a>
+           <span class="tooltip">Saved</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Setting</span>
+           </a>
+           <span class="tooltip">Setting</span>
+         </li>
+         <!-- <li class="profile">
+             <div class="profile-details">
+               <img src="profile.jpg" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">user</div>
+                 <div class="job"></div>
+               </div>
+             </div>
+             <i class='bx bx-log-out' id="log_out" ></i>
+         </li> -->
+        </ul>
+      </div>
+    </div>
+ 
+    <!-- First Header -->
+    <!-- <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p><span>Questions? Need Help? </span>Call us 0n (+123) 456 1500</p>
+                </div>
+                <div class="col-md-2">
+                    <span><i class=" fa fa-gift"></i></span> <a href="">BTP Gift Card</a>
+                </div>
+                <div class="col-md-2">
+                    <span><i class=" fa fa-star"></i></span> <a href="">Loyalty Program</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- End First Header -->
+
+
+
+    <!-- Second Header -->
+    <!-- mobile navbar  -->
+    <div class="logo-ct">
+        <nav class="navbar navbar-expand-lg navbar-light bg-default">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <ul id="dropdown-example" class="hidden py-2 space-y-2">
-                  <li>
-                     <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                  </li>
-                  <li>
-                     <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                  </li>
-                  <li>
-                     <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                  </li>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">ALL DEALS <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOTELS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ACTIVITIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOTEL DAY PACKAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">RESTURANTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">RODRIGUES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CART <span class="cart">2</span> </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="mr-2" src="./assets/Ellipse 1.png" width="40px" alt="">
+                            Nathan
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </li>
+                </ul>
+                <form action="#">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search Location">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+    </div>
+
+
+    <!-- Navigation section -->
+    <div class="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul>
+                        <li class="pl-0"><a href=""></a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li class="pr-0"><a href=""></a></li>
+
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end navigation section -->
+
+
+    <!-- first section -->
+    <div class="first-section">
+        <div class="container">
+            <div class="row">
+                <span class="breadcrumb">
+                    <a href="" class="pr-2 pl-0">
+                        Home
+                    </a> /
+                    <a href="" class="pr-2 pl-2">
+                        Flash Offers
+                    </a> /
+                    <a href="" class="pr-2 pl-2">
+                        Grand Hilton Hotel
+                    </a>
+                </span>
+            </div>
+            <div class="row pt-3 mb-4">
+                <div class="col-md-8">
+                    <p>
+                        <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+
+                    </p>
+
+                    <span class="grand ">HILTON HOTEL </span>
+                    <span class="offer mt-5">Flash Offer</span>
+                    <p>Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>
+                </div>
+                <div class="col-md-4 pr-4 rate">
+                    <div class="rating">
+                        <p class="m-0">User Ratings</p>
+                        <p class="m-0" style="font-size: 10px;"><b>4.5</b>/s</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mb-2">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img style="border-radius: 10px;" class="d-block w-100" src="./assets/Rectangle 5.png"
+                                    alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img style="border-radius: 10px;" class="d-block w-100" src="./assets/Rectangle 5.png"
+                                    alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img style="border-radius: 10px;" class="d-block w-100" src="./assets/Rectangle 5.png"
+                                    alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-md-4 mr-0">
+                    <div class="row ml-2 mr-2">
+                        <div class="card">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 card-lt">
+
+                                        <p>price starts as</p>
+                                        <h6 class="m-0"><i class="fa fa-dollar"></i> 8,500</h6>
+                                        <p>per room / right</p>
+                                        <h6 class="mt-3">Quick Booking</h6>
+                                    </div>
+                                    <div class="col-md-6 card-rt">
+                                        <p><i class="fa fa-user"></i> 2 x Guests</p>
+                                        <p><i class="fa fa-home"></i> 1 x Room</p>
+                                        <h6> <i class="fa fa-phone mt-4"></i> 12100</h6>
+                                    </div>
+                                </div>
+                                <div class="row danger">
+                                    <a href="">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4 ml-2 mr-2">
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12614.181940964645!2d-122.43398283797174!3d37.77725426794155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580a26c77306d%3A0xb43108d1e99c8af1!2sSouvla!5e0!3m2!1sen!2sng!4v1590252020525!5m2!1sen!2sng"
+                                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end first section -->
+
+
+
+    <!-- second section -->
+    <div class="second-section pb-5 pt-5">
+        <div class="container">
+            <!-- Nav tabs -->
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">Package Summery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu">Hotel Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu">Facilities & Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu">Dining & Entertainment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu">Reviews</a>
+                </li>
             </ul>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Kanban</span>
-               <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
-               <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Products</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Sign In</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-               <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
-               <span class="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
-            </a>
-         </li>
-      </ul>
-   </div>
-</aside>
 
-<div class="p-4 sm:ml-64">
-   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-      <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-      </div>
-      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-      </div>
-      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-      </div>
-   </div>
-</div>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active pl-0"><br>
+                    <h3>PACKAGE SUMMERY</h3>
+                    <div class="container-fluid pl-0">
+                        <div class="row mt-4 mb-4">
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-header blue">Package Highlights</div>
+                                    <div class="card-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Half Board/ All Inclusive
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Child Under 11 Years Stay
+                                                        Free</p>
+                                                    <span class="lux"><i class="fa fa-check-circle mr-3"></i> LUX* Me
+                                                        Spa</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Luxurious 5-Star Hotel
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Banyan An Adult Only Zone
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header blue">Offer Details</div>
+                                    <div class="card-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <i class="fa fa-check-circle mr-3"></i>
+                                                </div>
+                                                <div class="col-md-5 chill">
+                                                    <p>Benefit from a special <br>
+                                                        discounted CHILL'OUT OFFER <br> at
+                                                        Grand Hilton Hotel
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <i class="fa fa-calendar mr-3"></i>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>10th March - 30th April 2020</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-1">
+                                                <div class="col-md-1"></div>
+                                                <div class="col-md-11">
+                                                    <span>*Valid until 30 April 2020</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header blue">Package Summery Details</div>
+                                    <div class="card-body">
+                                        <div class="container-fluid">
+                                            <div class="row mt-4">
+                                                <div class="col-md-4">
+                                                    <h6>Purchase Inclusions</h6>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Room as per selection
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Half Board or All
+                                                        Inclusive Meal Plan
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Complimentary Land &
+                                                        Water activities
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Child Under 11 years old
+                                                        stays free
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Free Wi-Fi
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Free Secure Parking
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h6>Complimentary Land Based Activities</h6>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Gym
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Beach Volley
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Table tennis
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Soccer balls
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Yoga
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Unlimited access to
+                                                        driving range
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h6>Complimentary Water Based Activities</h6>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Water skiing
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Windsurfing
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Pedal boats
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Kayaking
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Aqua Gym
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Glass bottom boat trips
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row mt-4 mb-4">
+                                                <div class="col-md-4">
+                                                    <h6>Meal Plan Available</h6>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Half Board
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> All Inclusive
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h6>Entertainment</h6>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Live music
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> DJ & Mauritian Dance Show
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h6>Check In & Check Out</h6>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Check In Time 14:00
+                                                    </p>
+                                                    <p><i class="fa fa-check-circle mr-3"></i> Check In Time 11:00
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu" class="container tab-pane fade"><br>
+                    <p>Oops, Kindly check back later.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end second section -->
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+
+    <!-- third section -->
+    <div class="third-section pt-5">
+        <div class="container">
+            <h3>OTHER PACKAGES</h3>
+            <div class="row mt-5">
+                <div class="col-md-8">
+                    <div class="container-fluid">
+                        <div class="row side-image side-image2" style="border-radius: 10px;">
+                            <div class="col-md-6 ftd">
+                                <!-- featured image -->
+                            </div>
+                            <div class="col-md-6 haven ">
+                                <p class="mb-0">
+                                    <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                                <p class="pt-3 mb-3">Hotel Blue Haven </p>
+                                <p class="mb-3">
+                                    Aute quis duis excepteur excepteur ipsum cat eiusmod
+                                    consectetur enim laborum magna llit. Ipsum est fugiat velit
+                                    ea llamco do esse ut in veniam sun in onsequat. Aute quis
+                                    duis epteur excepteur ipsum occaecat eiusmod nsectetur enim
+                                    laborum magna mollit. Ipsum est fugiat velit ea ullamco do</p>
+
+                                <p><i class="fa fa-map-marker"></i> 1749 </p>
+                                <p><i class="fa fa-user"></i> 2 x Guests</p>
+                                <p class="mb-3"><i class="fa fa-home"></i> 1 x Room</p>
+
+                                <p><del>$ 10,500</del></p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <b>$ 8,500</b>
+                                    </div>
+                                    <div class="col-md-6 danger">
+                                        <a href="">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 side-image3 mb-2">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="card" style="width:100%">
+                                <img class="card-img-top" src="./assets/Rectangle 20 .png" alt="Card image"
+                                    style="width:100%">
+                                <div class="card-body side-image">
+
+                                    <div class="col-md-6 haven ">
+                                        <p class="mb-0">
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                        <p class="pt-3 mb-3">Hotel Blue Haven </p>
+                                        <p class="mb-3">
+                                            Aute quis duis excepteur excepteur ipsum cat eiusmod
+                                            consectetur enim laborum magna llit. Ipsum est fugiat velit
+                                            ea llamco do esse ut in veniam sun in onsequat. Aute quis
+                                            duis epteur excepteur ipsum occaecat eiusmod nsectetur enim
+                                            laborum magna mollit. Ipsum est fugiat velit ea ullamco do</p>
+
+                                        <p><i class="fa fa-map-marker"></i> 1749 </p>
+                                        <p><i class="fa fa-user"></i> 2 x Guests</p>
+                                        <p class="mb-3"><i class="fa fa-home"></i> 1 x Room</p>
+
+                                        <p><del>$ 10,500</del></p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <b>$ 8,500</b>
+                                            </div>
+                                            <div class="col-md-6 danger">
+                                                <a href="">Book Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="card" style="width:100%">
+                                <img class="card-img-top" src="./assets/fl2.jpg" alt="Card image" style="width:100%">
+                                <div class="card-body side-image">
+
+                                    <span class="mb-3">LUX*Belle Mare</span>
+                                    <p class="mt-3"><i class="fa fa-map-marker"></i> 1749 </p>
+                                    <p><i class="fa fa-user"></i> 2 x Guests</p>
+                                    <p class="mb-3"><i class="fa fa-home"></i> 1 x Room</p>
+
+                                    <p><del>$ 10,500</del></p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <b>$ 8,500</b>
+                                        </div>
+                                        <div class="col-md-6 danger">
+                                            <a href="">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+
+                    <div class="row mt-4">
+                        <div class="col-md-4 mb-2">
+
+                            <div class="card" style="width:100%">
+                                <img class="card-img-top" src="./assets/fl3.jpg" alt="Card image" style="width:100%">
+                                <div class="card-body side-image">
+
+                                    <span class="mb-3">White Palace</span>
+                                    <p class="mt-3"><i class="fa fa-map-marker"></i> 1749 </p>
+                                    <p><i class="fa fa-user"></i> 2 x Guests</p>
+                                    <p class="mb-3"><i class="fa fa-home"></i> 1 x Room</p>
+
+                                    <p><del>$ 10,500</del></p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <b>$ 8,500</b>
+                                        </div>
+                                        <div class="col-md-6 danger">
+                                            <a href="">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+
+                            <div class="card" style="width:100%">
+                                <img class="card-img-top" src="./assets/fl4.jpg" alt="Card image" style="width:100%">
+                                <div class="card-body side-image">
+
+                                    <span class="mb-3">Luxury Place</span>
+                                    <p class="mt-3"><i class="fa fa-map-marker"></i> 1749 </p>
+                                    <p><i class="fa fa-user"></i> 2 x Guests</p>
+                                    <p class="mb-3"><i class="fa fa-home"></i> 1 x Room</p>
+
+                                    <p><del>$ 10,500</del></p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <b>$ 8,500</b>
+                                        </div>
+                                        <div class="col-md-6 danger">
+                                            <a href="">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+
+                            <div class="card" style="width:100%">
+                                <img class="card-img-top" src="./assets/fl5.jpg" alt="Card image" style="width:100%">
+                                <div class="card-body side-image">
+
+                                    <span class="mb-3">Hotel Five Star</span>
+                                    <p class="mt-3"><i class="fa fa-map-marker"></i> 1749 </p>
+                                    <p><i class="fa fa-user"></i> 2 x Guests</p>
+                                    <p class="mb-3"><i class="fa fa-home"></i> 1 x Room</p>
+
+                                    <p><del>$ 10,500</del></p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <b>$ 8,500</b>
+                                        </div>
+                                        <div class="col-md-6 danger">
+                                            <a href="">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end third section -->
+
+
+
+        <!-- fourth section -->
+        <div class="fourth-section pt-5 pb-5">
+            <div class="container">
+                <h3 class="mt-4 mb-3">WHAT PEOPLE THINKS ABOUT US</h3>
+                <!-- testimonial slider -->
+
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./assets/testi.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/testi.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/testi.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- end fourth section -->
+
+
+        <!-- newsletter section -->
+        <div class="news-section">
+            <div class="container">
+                <div class="row mail">
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-3 pr-5 pb-2 ">
+                        <span>
+                            subscribe to our<br />
+                            NEWSLETTER
+                        </span>
+                    </div>
+                    <div class="col-md-3 ">
+                        <form action="#">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Your email address">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Send</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end newsletter section -->
+
+
+
+        <!-- fifth section -->
+        <!-- Desktop view -->
+        <div class="fifth-section pt-5 pb-5">
+            <div class="container">
+                <h3 class="mb-5" style="text-align: left;">OTHER ACTIVITIES</h3>
+                <div class="row">
+                    <div class="col-md-3 pb-4 ftd1">
+
+                        <div class="col-md-12 danger">
+
+                            <p>The curious corner <br />
+                                of charmel</p>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pb-4 ftd2">
+
+                        <div class="col-md-12 danger">
+
+                            <p>Gymkhana club golf<br />
+                                course</p>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pb-4 ftd3">
+
+                        <div class="col-md-12 danger">
+
+                            <p>Tamarind falls hiking<br />
+                                trip - full day </p>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pb-4 ftd4">
+
+                        <div class="col-md-12 danger">
+
+                            <p>The blue marine discovery <br />
+                                quest</p>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end desktop view -->
+        <!-- mobile view -->
+        <div class="fifth-section-2 pt-5 pb-5">
+            <div class="container">
+                <h3 class="mb-5" style="text-align: left;">OTHER ACTIVITIES</h3>
+                <div class="row ml-4">
+                    <div class="col-md-12 pb-4 ftd1">
+
+                        <div class="col-md-12 danger">
+
+                            <p>The curious corner <br />
+                                of charmel</p>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 spc mb-3">
+                        <!-- space -->
+                    </div>
+                    <div class="col-md-12 pb-4 ftd2">
+
+                        <div class="col-md-12 danger">
+
+                            <p>Gymkhana club golf<br />
+                                course</p>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 spc mb-3">
+                        <!-- space -->
+                    </div>
+                    <div class="col-md-12 pb-4 ftd3">
+
+                        <div class="col-md-12 danger">
+
+                            <p>Tamarind falls hiking<br />
+                                trip - full day </p>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 spc mb-3">
+                        <!-- space -->
+                    </div>
+                    <div class="col-md-12 pb-4 ftd4">
+
+                        <div class="col-md-12 danger">
+
+                            <p>The blue marine discovery <br />
+                                quest</p>
+                            <a href="">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 spc mb-3">
+                        <!-- space -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end mobile view -->
+        <!-- end fifth section -->
+
+
+
+        <!-- footer section -->
+        <div class="footer pt-5 pb-4">
+            <div class="container">
+                <!-- upper part -->
+                <div class="row pt-4 pb-5">
+                    <div class="col-md-3 mb-3 logo">
+                        <a href="">
+                            <img src="./assets/Best tour plan.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>ALL CATEGORIES</h4>
+                        <ul>
+                            <li><a href="">Deals</a></li>
+                            <li> <a href="">Hotels Activities </a></li>
+                            <li><a href="">Spa Packages</a> </li>
+                            <li><a href="">Hotel Day Packages</a></li>
+                            <li><a href="">Restaurants</a></li>
+                            <li><a href="">Fitness</a></li>
+                            <li><a href="">Rodrigues</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>ADDITIONAL INFORMATION</h4>
+
+                        <ul>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">How does it work?</a></li>
+                            <li><a href="">Frequently Asked Questions</a> </li>
+                            <li><a href="">Deals.mu loyalty program</a></li>
+                            <li><a href="">Promote your Business on BTP</a></li>
+                        </ul>
+                        <span>
+                            <h4>SOCIAL NETWORK
+                                <a href=""><i class="ml-4 fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-youtube-square"></i></a>
+                                <a href=""><i class="fa fa-instagram"></i></a>
+                            </h4>
+                        </span>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>LEGAL INFORMATION</h4>
+                        <ul>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Disclaimer</a></li>
+                            <li><a href="">Cancellation policy</a></li>
+                            <li><a href="">Privacy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- lower part -->
+                <div class="row mt-3 pb-5">
+                    <div class="col-md-6 mb-3">
+                        <h4 class="mb-3 contact">CONTACT DETAILS</h4>
+                        <p>Feel free to contact us by phone, email or by our contact form</p>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="col-md-11">
+                                9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-1">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="col-md-11">
+                                Tel(business hours) :269 1500 <br>
+                                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
+                                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm) <br>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-1">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="col-md-11">
+                                cherly.lowson@example.com
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="mb-3 contact">SEND US A MESSAGE</h4>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <input type="text" class="form-control" placeholder="Your Full Name*" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Phone Number*">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <textarea name="message" class="form-control" placeholder="Message" cols="58"
+                                        rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <input type="submit" class="submit" value="Send">
+                                </div>
+                                <div class="col-md-3">
+                                </div>
+                                <div class="col-md-3">
+                                    *Required Fields
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"> </div>
+                    <div class="col-md-4 rear">
+                        <a href="">Disclaimer</a>
+                        <a href="">Conditions of use</a>
+                        <a href=""> Cancellation policy</a>
+                    </div>
+                    <div class="col-md-4 support">
+                        <img src="./assets/image 3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end footer section -->
+
+
+<!-- script responsible for the sidebar  -->
+<script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+</script>
+
 </body>
+
 </html>
