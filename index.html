@@ -667,7 +667,29 @@
   <!-- end footer section -->
 
 <!-- script responsible for the sidebar  -->
-  <script>
+  <!-- <script>
+    // sidebar collapse and expand effect 
+    // Get the sidebar element and the button to expand/collapse the sidebar
+    const sidebar = document.querySelector('.sidebar');
+    const btn = document.getElementById('btn');
+
+    // Add event listener to expand the sidebar on hover
+    sidebar.addEventListener('mouseenter', () => {
+      sidebar.classList.add('expanded');
+    });
+
+    // Add event listener to collapse the sidebar on mouse leave
+    sidebar.addEventListener('mouseleave', () => {
+      sidebar.classList.remove('expanded');
+    });
+
+    // Add event listener to toggle the sidebar when the button is clicked
+    btn.addEventListener('click', () => {
+      sidebar.classList.toggle('expanded');
+    });
+    // ---ends here------
+
+
     let sidebar = document.querySelector(".sidebar");
     let closeBtn = document.querySelector("#btn");
     let searchBtn = document.querySelector(".bx-search");
@@ -691,6 +713,31 @@
      }
     }
   </script>
+ -->
+ <script>
+  // Sidebar collapse and expand effect
+  const sidebar = document.querySelector('.sidebar');
+  const closeBtn = document.querySelector('#btn');
+  const searchBtn = document.querySelector('.bx-search');
+
+  closeBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    menuBtnChange();
+  });
+
+  function menuBtnChange() {
+    if (sidebar.classList.contains('open')) {
+      closeBtn.classList.replace('bx-menu', 'bx-menu-alt-right');
+    } else {
+      closeBtn.classList.replace('bx-menu-alt-right', 'bx-menu');
+    }
+  }
+</script>
 
   <!-- Add Bootstrap JS link (required for the carousel) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
