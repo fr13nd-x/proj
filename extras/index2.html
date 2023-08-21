@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>burudika ventures</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <!-- Font awesome  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- for the sidebar icons & styling-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="sidebar.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Add your custom CSS link here -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+  
+</head>
+<body>
+  <!-- start sidebar -->
+    <div class="card">
+      <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-c-plus-plus icon'></i>
+          <div class="logo_name">Burudika</div>
+          <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <i class='bx bx-search'></i>
+            <input type="text" placeholder="Search...">
+            <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Vehicles</span>
+            </a>
+            <span class="tooltip">Vehicles</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-user'></i>
+              <span class="links_name">Hotels</span>
+            </a>
+            <span class="tooltip">Hotels</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-chat'></i>
+              <span class="links_name">Messages</span>
+            </a>
+            <span class="tooltip">Messages</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-pie-chart-alt-2'></i>
+              <span class="links_name">Analytics</span>
+            </a>
+            <span class="tooltip">Analytics</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-folder'></i>
+              <span class="links_name">File Manager</span>
+            </a>
+            <span class="tooltip">Files</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cart-alt'></i>
+              <span class="links_name">Order</span>
+            </a>
+            <span class="tooltip">Order</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-heart'></i>
+              <span class="links_name">Saved</span>
+            </a>
+            <span class="tooltip">Saved</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cog'></i>
+              <span class="links_name">Setting</span>
+            </a>
+            <span class="tooltip">Setting</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- end sidebar -->
+
+  <!-- Navigation section -->
+  <div class="menu">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <ul class="d-flex justify-content-center">
+            <li class="pl-0"><a href=""></a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li class="pr-0"><a href=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end navigation section -->
+
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      menuBtnChange(); //calling the function(optional)
+    });
+
+    searchBtn.addEventListener("click", () => {
+      // Sidebar open when you click on the search icon
+      sidebar.classList.toggle("open");
+      menuBtnChange(); //calling the function(optional)
+    });
+
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+      if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the icons class
+      } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the icons class
+      }
+    }
+  </script>
+
+  <!-- Add Bootstrap JS link (required for the carousel) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
