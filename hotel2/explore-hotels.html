@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rent your favourite hotel</title>
+      
+        
+        <!-- 
+          - favicon
+        -->
+        <link rel="shortcut icon" href="./burudika.svg" type="image/svg+xml">
+      
+        <!-- 
+          - custom css link
+        -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <!-- 
+          - google font link
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+          rel="stylesheet">
+      </head>
+<body>
+    <div id="header-container">
+        <header class="header" data-header>
+            <div class="container">
+        
+              <div class="overlay" data-overlay></div>
+        
+              <a href="#" class="logo">
+                <img src="./assets/images/logo.svg" alt="burudika logo">
+              </a>
+        
+              <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+        
+                  <li>
+                    <a href="./" class="navbar-link" data-nav-link>Home</a>
+                  </li>
+        
+                  <li>
+                    <a href="#featured-hotel" class="navbar-link" data-nav-link>Explore Hotels</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="navbar-link" data-nav-link>About us</a>
+                  </li>
+        
+                  <li>
+                    <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+                  </li>
+        
+                </ul>
+              </nav>
+        
+              <div class="header-actions">
+        
+                <div class="header-contact">
+                  <a href="tel:+254795319311" class="contact-link">+254795 319 311</a>
+        
+                  <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+                </div>
+        
+                <a href="#featured-hotel" class="btn" aria-labelledby="aria-label-txt">
+                  <ion-icon name="car-outline"></ion-icon>
+        
+                  <span id="aria-label-txt">Explore Hotels</span>
+                </a>
+        
+                <a href="#" class="btn user-btn" aria-label="Profile">
+                  <ion-icon name="person-outline"></ion-icon>
+                </a>
+        
+                <div class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+                  <i class='bx bx-menu' id="btn-topnav" ></i>
+                </div>
+        
+              </div>
+        
+            </div>
+        </header>
+      </div>
+
+    <section class="section featured-hotel" style="margin-top: 1rem;" id="featured-hotel">
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h3 section-title">Browse Hotels </h2>
+
+            <a href="#" class="featured-hotel-link">
+              <span></span>
+
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+          <ul class="featured-hotel-list">
+
+            <li>
+              <div class="featured-hotel-hoteld">
+
+                <figure class="hoteld-banner">
+                  <img src="./assets/images/hilton.png" alt="hilton" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+
+                <div class="hoteld-content">
+
+                  <div class="hoteld-title-wrapper">
+                    <h3 class="h3 hoteld-title">
+                      <a href="#">Hilton</a>
+                    </h3>
+
+                    <data class="year" value="2021">2021</data>
+                  </div>
+
+                  <ul class="hoteld-list">
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">4 People</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Hybrid</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <span class="hoteld-item-text">6.1km / 1-litre</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <span class="hoteld-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="hoteld-price-wrapper">
+
+                    <p class="hoteld-price">
+                      <strong>$440</strong> / Day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-hotel-hoteld">
+
+                <figure class="hoteld-banner">
+                  <img src="./assets/images/kempinski.png" alt="kempinski" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+
+                <div class="hoteld-content">
+
+                  <div class="hoteld-title-wrapper">
+                    <h3 class="h3 hoteld-title">
+                      <a href="#">Kempinski</a>
+                    </h3>
+
+                    <data class="year" value="2019">2019</data>
+                  </div>
+
+                  <ul class="hoteld-list">
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">4 People</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Gasoline</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">8.2km / 1-litre</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="hoteld-price-wrapper">
+
+                    <p class="hoteld-price">
+                      <strong>$350</strong> / Day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-hotel-hoteld">
+
+                <figure class="hoteld-banner">
+                  <img src="./assets/images/serena.png" alt="serena" loading="lazy" width="440"
+                    height="300" class="w-100">
+                </figure>
+
+                <div class="hoteld-content">
+
+                  <div class="hoteld-title-wrapper">
+                    <h3 class="h3 hoteld-title">
+                      <a href="#">Serena</a>
+                    </h3>
+
+                    <data class="year" value="2020">2020</data>
+                  </div>
+
+                  <ul class="hoteld-list">
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">4 People</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Gasoline</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">5.3km / 1-litre</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="hoteld-price-wrapper">
+
+                    <p class="hoteld-price">
+                      <strong>$400</strong> / Day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-hotel-hoteld">
+
+                <figure class="hoteld-banner">
+                  <img src="./assets/images/sarova.png" alt="sarova" loading="lazy" width="440"
+                    height="300" class="w-100">
+                </figure>
+
+                <div class="hoteld-content">
+
+                  <div class="hoteld-title-wrapper">
+                    <h3 class="h3 hoteld-title">
+                      <a href="#">Sarova</a>
+                    </h3>
+
+                    <data class="year" value="2020">2020</data>
+                  </div>
+
+                  <ul class="hoteld-list">
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">4 People</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Gasoline</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">7.7km / 1-litre</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="hoteld-price-wrapper">
+
+                    <p class="hoteld-price">
+                      <strong>$620</strong> / Day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-hotel-hoteld">
+
+                <figure class="hoteld-banner">
+                  <img src="./assets/images/Diani.png" alt="Diani" loading="lazy" width="440"
+                    height="300" class="w-100">
+                </figure>
+
+                <div class="hoteld-content">
+
+                  <div class="hoteld-title-wrapper">
+                    <h3 class="h3 hoteld-title">
+                      <a href="#">Diani</a>
+                    </h3>
+
+                    <data class="year" value="2021">2021</data>
+                  </div>
+
+                  <ul class="hoteld-list">
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">4 People</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Gasoline</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">7.6km / 1-litre</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="hoteld-price-wrapper">
+
+                    <p class="hoteld-price">
+                      <strong>$530</strong> / Day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-hotel-hoteld">
+
+                <figure class="hoteld-banner">
+                  <img src="./assets/images/5s.jpg" alt="5s" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+
+                <div class="hoteld-content">
+
+                  <div class="hoteld-title-wrapper">
+                    <h3 class="h3 hoteld-title">
+                      <a href="#">5Star</a>
+                    </h3>
+
+                    <data class="year" value="2019">2019</data>
+                  </div>
+
+                  <ul class="hoteld-list">
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">4 People</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Gasoline</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">7.2km / 1-litre</span>
+                    </li>
+
+                    <li class="hoteld-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="hoteld-item-text">Automatic</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="hoteld-price-wrapper">
+
+                    <p class="hoteld-price">
+                      <strong>$490</strong> / Day
+                    </p>
+
+                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+    </section>
+    
+<div>
+
+</div>
+    
+
+
+
+
+  <script src="common.js"></script> 
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

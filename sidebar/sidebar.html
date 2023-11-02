@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidenav</title>
+ 
+
+
+    <link rel="stylesheet" href="sidebar.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+ 
+    
+
+</head>
+<body>
+  <!-- In your individual pages -->
+  <div id="sidebar-container">
+
+      <!-- start sidebar -->
+      <div class="card">
+        <div class="sidebar">
+          <div class="logo-details">
+            <i class='bx bxl-c-plus-plus icon'></i>
+              <div class="logo_name">Burudika</div>
+              <i class='bx bx-menu' id="btn" ></i>
+          </div>
+          <ul class="nav-list">
+            <li>
+                <i class='bx bx-search' ></i>
+               <input type="text" placeholder="Search...">
+               <span class="tooltip">Search</span>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bx-car'></i>
+                <span class="links_name">Vehicles</span>
+              </a>
+               <span class="tooltip">Vehicles</span>
+            </li>
+            <li>
+             <a href="#">
+               <i class='bx bx-hotel' ></i>
+               <span class="links_name">Hotels</span>
+             </a>
+             <span class="tooltip">Hotels</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-chat' ></i>
+               <span class="links_name">Messages</span>
+             </a>
+             <span class="tooltip">Messages</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-pie-chart-alt-2' ></i>
+               <span class="links_name">Analytics</span>
+             </a>
+             <span class="tooltip">Analytics</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-folder' ></i>
+               <span class="links_name">File Manager</span>
+             </a>
+             <span class="tooltip">Files</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-cart-alt' ></i>
+               <span class="links_name">Order</span>
+             </a>
+             <span class="tooltip">Order</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-heart' ></i>
+               <span class="links_name">Saved</span>
+             </a>
+             <span class="tooltip">Saved</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-cog' ></i>
+               <span class="links_name">Settings</span>
+             </a>
+             <span class="tooltip">Settings</span>
+           </li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>  
+      <!-- end sidebar -->
+
+
+<script>
+// Sidebar collapse and expand effect
+const sidebar = document.querySelector('.sidebar');
+const closeBtn = document.querySelector('#btn');
+const searchBtn = document.querySelector('.bx-search');
+
+closeBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    menuBtnChange();
+});
+
+searchBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    menuBtnChange();
+});
+
+function menuBtnChange() {
+    if (sidebar.classList.contains('open')) {
+    closeBtn.classList.replace('bx-menu', 'bx-menu-alt-right');
+    } else {
+    closeBtn.classList.replace('bx-menu-alt-right', 'bx-menu');
+    }
+}
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

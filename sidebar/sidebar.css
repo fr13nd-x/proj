@@ -1,0 +1,328 @@
+:root {
+
+  /**
+   * colors
+   */
+  --themecream: hsl(216, 38%, 95%);
+  --themeblue: hsl(212,72%,14%); 
+  --themepink: hsl(349,84%,52%);
+  --pale-purple-pantone: hsl(262, 63%, 92%);
+  --medium-sea-green: hsl(152, 63%, 43%);
+  --lavender-blush: hsl(336, 35%, 92%);
+  --carolina-blue: hsl(204, 91%, 53%);
+  --columbia-blue: hsl(204, 92%, 90%);
+  --alice-blue-1: hsl(216, 38%, 95%);
+  --alice-blue-2: hsl(216, 75%, 97%);
+  --alice-blue-3: hsl(216, 38%, 95%);
+  --alice-blue-4: hsl(217, 33%, 92%);
+  --independence: hsl(219, 21%, 39%);
+  --deep-cerise: hsl(329, 63%, 52%);
+  --eerie-black: hsl(210, 11%, 15%);
+  --space-cadet: hsl(240, 22%, 25%);
+  --blue-jeans: hsl(204, 80%, 63%);
+  --slate-blue: hsl(262, 60%, 57%);
+  --beau-blue: hsl(208, 86%, 92%);
+  --honey-dew: hsl(152, 48%, 89%);
+  --mimi-pink: hsl(329, 63%, 90%);
+  --red-salsa: hsl(0, 79%, 63%);
+  --sapphire: hsl(211, 100%, 35%);
+  --manatee: hsl(219, 14%, 60%);
+  --white: hsl(0, 0%, 100%);
+
+  --gradient: linear-gradient(to top, var(--alice-blue-2), var(--alice-blue-3));
+
+  /**
+   * typography
+   */
+
+  --ff-nunito: 'Nunito', sans-serif;
+  --ff-open-sans: 'Open Sans', sans-serif;
+
+  --fs-1: 2.125rem;
+  --fs-2: 1.875rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.375rem;
+  --fs-5: 1.125rem;
+  --fs-6: 0.875rem;
+  --fs-7: 0.625rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+
+  /**
+   * transition
+   */
+
+  --transition: 0.5s ease;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 50px;
+
+  /**
+   * radius
+   */
+
+  --radius-10: 10px;
+  --radius-14: 14px;
+  --radius-18: 18px;
+
+  /**
+   * shadow
+   */
+
+  --shadow-1: 3px 3px 9px hsla(240, 14%, 69%, 0.2);
+  --shadow-2: 3px 3px 9px hsla(204, 92%, 59%, 0.3);
+
+}
+
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%; /* Adjust the height as needed */
+  width: 78px;
+  /* margin-top: 6px;
+  margin-right: 6px; */
+/*  background: #11101D;*/
+  background: var(--themecream);
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+  border-top-right-radius: 10px; /* Rounded top-right corner */
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px; /* Rounded bottom-right corner */
+  border-bottom-left-radius: 10px;
+
+}
+
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: var(--themeblue);
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: var(--themeblue);
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+/*  background: #11101D;*/
+}
+
+/*sidebar hover background*/
+.sidebar li a:hover{
+  background: #ec1f46;
+}
+.sidebar li a .links_name{
+  color: var(--themeblue);
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*sidebar names*/
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #fff;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #0a223e;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
