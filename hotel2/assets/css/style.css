@@ -641,8 +641,14 @@ button, a { transition: var(--transition); }
   --ionicon-stroke-width: 38px;
 }
 
-/* material icons properties */
+/* material icons outlined properties */
 .featured-hotel-hoteld .hoteld-list-item .material-symbols-outlined{
+  color: var(--hotelolina-blue);
+  font-size: 20px;
+}
+
+/* material icons rounded properties */
+.featured-hotel-hoteld .hoteld-list-item .material-symbols-rounded{
   color: var(--hotelolina-blue);
   font-size: 20px;
 }
