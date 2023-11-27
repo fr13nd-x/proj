@@ -180,6 +180,11 @@ button, a { transition: var(--transition); }
   overflow: hidden;
 }
 
+.btn a{
+  color: var(--color, var(--white));
+}
+
+
 .btn ion-icon {
   font-size: 22px;
   --ionicon-stroke-width: 40px;
@@ -629,10 +634,17 @@ button, a { transition: var(--transition); }
   gap: 8px;
 }
 
+/* color of the ionic icon */
 .featured-hotel-hoteld .hoteld-list-item ion-icon {
   font-size: 20px;
   color: var(--hotelolina-blue);
   --ionicon-stroke-width: 38px;
+}
+
+/* material icons properties */
+.featured-hotel-hoteld .hoteld-list-item .material-symbols-outlined{
+  color: var(--hotelolina-blue);
+  font-size: 20px;
 }
 
 .featured-hotel-hoteld .hoteld-item-text {
