@@ -36,6 +36,7 @@
   --sapphire: hsl(211, 100%, 35%);
   --manatee: hsl(219, 14%, 60%);
   --white: hsl(0, 0%, 100%);
+  --yellow:hsl(43, 100%, 50%);
 
   --gradient: linear-gradient(to top, var(--alice-blue-2), var(--alice-blue-3));
 
@@ -201,10 +202,13 @@ button, a { transition: var(--transition); }
   transition: var(--transition);
 }
 
-.btn:is(:hover, :focus) { box-shadow: var(--shadow-2); }
+.btn:is(:hover, :focus) { 
+  box-shadow: var(--shadow-2); 
+  background-color: var(--themepink);
+}
 
 .btn:is(:hover, :focus)::before { 
-  opacity: 1;
+  /* opacity: 1; */
   
 }
 
@@ -374,15 +378,33 @@ button, a { transition: var(--transition); }
 
 .hero-form {
   background: var(--gradient);
-  border: 1px solid var(--white);
+  /* border: 3px solid var(--yellow); */
   box-shadow: var(--shadow-1);
   border-radius: var(--radius-18);
   font-family: var(--ff-nunito);
+  
+
 }
 
-.input-wrapper { padding: 15px 20px; }
+.hero-form .btn {
+  --width: calc(100% - 40px);
+  --height: 60px;
+  margin: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-right: 18px;
+  /* border: 3px solid var(--yellow); */
+  text-transform: uppercase;
+}
 
-.input-wrapper:not(:last-of-type) { border-bottom: 1px solid hsla(0, 0%, 0%, 0.08); }
+.input-wrapper { 
+  --width: calc(100% - 40px);
+  --height: 60px;
+  justify-content: space-around;
+  margin-bottom: 0px;
+  /* border-right: 3px solid var(--yellow);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             */
+}
+
 
 .input-label {
   color: var(--manatee);
@@ -391,23 +413,26 @@ button, a { transition: var(--transition); }
 }
 
 .input-field {
+  --width: calc(100% - 40px);
+  height: 60px;
   color: var(--space-cadet);
   outline: 2px solid transparent;
-  outline-offset: 5px;
-  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-bottom: 0;
+  /* outline-offset: 1px; */
+  border-radius: 0.5px;
   transition: var(--transition);
+  box-sizing: border-box; /* Include padding in total width/height */
 }
 
 .input-field:focus { outline-color: var(--hotelolina-blue); }
 
 .input-field::placeholder { color: var(--independence); }
 
-.hero-form .btn {
-  --width: calc(100% - 40px);
-  --height: 50px;
-  margin: 20px;
-  text-transform: uppercase;
-}
+
 
 
 /* first section */
@@ -973,11 +998,9 @@ button, a { transition: var(--transition); }
   #MEDIA QUERIES
 \*-----------------------------------*/
 
-/**
- * responsive for large than 350px screen
- */
-
+/* Responsive for screens larger than 350px (Typically Phones) */
 @media (min-width: 350px) {
+  /* Your styles for screens larger than 350px (Phones) */
 
   /**
    * FEATURED hotel
@@ -991,6 +1014,7 @@ button, a { transition: var(--transition); }
     min-width: max-content;
     padding-inline: 15px;
   }
+  
 
 }
 
@@ -998,11 +1022,9 @@ button, a { transition: var(--transition); }
 
 
 
-/**
- * responsive for large than 580px screen
- */
-
+/* Responsive for screens larger than 580px (Typically Phones or Small Tablets) */
 @media (min-width: 580px) {
+  /* Your styles for screens larger than 580px (Phones or Small Tablets) */
 
   /**
    * REUSED STYLE
@@ -1029,12 +1051,9 @@ button, a { transition: var(--transition); }
 
 
 
-
-/**
- * responsive for large than 768px screen
- */
-
+/* Responsive for screens larger than 768px (Typically Tablets or Small Laptops) */
 @media (min-width: 768px) {
+  /* Your styles for screens larger than 768px (Tablets or Small Laptops) */
 
   /**
    * CUSTOM PROPERTY
@@ -1092,7 +1111,7 @@ button, a { transition: var(--transition); }
 
   .hero-form {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0.8fr;
+    grid-template-columns: 1fr 0.8fr 0.8fr 0.8fr;
   }
 
   .input-wrapper:not(:last-of-type) {
@@ -1154,14 +1173,9 @@ button, a { transition: var(--transition); }
 
 
 
-
-
-/**
- * responsive for large than 992px screen
- */
-
+/* Responsive for screens larger than 992px (Typically Laptops) */
 @media (min-width: 992px) {
-
+  /* Your styles for screens larger than 992px (Laptops) */
   /**
    * REUSED STYLE
    */
@@ -1193,13 +1207,9 @@ button, a { transition: var(--transition); }
 
 
 
-
-
-/**
- * responsive for large than 1200px screen
- */
-
+/* Responsive for screens larger than 1200px (Typically Large Laptops or Desktops) */
 @media (min-width: 1200px) {
+  /* Your styles for screens larger than 1200px (Large Laptops or Desktops) */
 
   /**
    * CUSTOM PROPERTY

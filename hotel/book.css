@@ -167,6 +167,10 @@ button, a { transition: var(--transition); }
   overflow: hidden;
 }
 
+.btn button{
+    color: var(--white);
+}
+
 .btn ion-icon {
   font-size: 22px;
   --ionicon-stroke-width: 40px;
@@ -453,12 +457,6 @@ button, a { transition: var(--transition); }
 }
 .third-section .side-image .haven{
     padding: 40px 3px 25px 3px;
-}
-
-
-/* fourth section  */
-.fourth-section{
-    background: #f5fafe;
 }
 
 
@@ -861,4 +859,5 @@ button, a { transition: var(--transition); }
     }
     
     
+}
 }
