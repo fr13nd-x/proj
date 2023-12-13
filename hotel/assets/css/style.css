@@ -657,30 +657,23 @@ button, a { transition: var(--transition); }
   display: flex;
   align-items: center;
   gap: 8px;
+  color: rgb(26, 126, 17);
+  font-size: 12px;
+  
+  
 }
 
-/* color of the ionic icon */
-.featured-hotel-hoteld .hoteld-list-item ion-icon {
-  font-size: 20px;
-  color: var(--hotelolina-blue);
-  --ionicon-stroke-width: 38px;
+/* color of the icon */
+.featured-hotel-hoteld .hoteld-list-item .fa-light{
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
 }
 
-/* material icons outlined properties */
-.featured-hotel-hoteld .hoteld-list-item .material-symbols-outlined{
-  color: var(--hotelolina-blue);
-  font-size: 20px;
-}
-
-/* material icons rounded properties */
-.featured-hotel-hoteld .hoteld-list-item .material-symbols-rounded{
-  color: var(--hotelolina-blue);
-  font-size: 20px;
-}
-
+/*color of the amenities label*/
 .featured-hotel-hoteld .hoteld-item-text {
-  color: var(--independence);
-  font-size: var(--fs-6);
+/*  font-size: var(--fs-6);*/
+    font-size: 12px;
 }
 
 .featured-hotel-hoteld .hoteld-price-wrapper {

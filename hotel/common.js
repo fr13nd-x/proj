@@ -21,7 +21,7 @@ function initializeSidebar() {
     // Your script code for the sidebar collapse and expand effect
     const sidebar = document.querySelector('.sidebar');
     const closeBtn = document.querySelector('#btn-sidenav');
-    const searchBtn = document.querySelector('.bx-search');
+    const searchBtn = document.querySelector('.fa-magnifying-glass');
 
     closeBtn.addEventListener('click', () => {
         sidebar.classList.toggle('open');
