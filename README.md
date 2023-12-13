@@ -7,8 +7,9 @@ Visit the deployed site: [Burudika Ventures](https://burudika.netlify.app/hotel)
 
 Check out the final project blog article here [link]().
 
-Author: [fr13nd-x](https://github.com/fr13nd-x) (Contact: morsewallace254@gmail.com)
-LinkedIn: Moses Gichia
+### Author: [fr13nd-x](https://github.com/fr13nd-x) 
+    [Email](mailto: morsewallace254@gmail.com)
+    [LinkedIn profile](https://www.linkedin.com/in/mosesgichia/)
 
 ## Installation
 
